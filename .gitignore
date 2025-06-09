@@ -1,5 +1,7 @@
 *.log
-Theatrum Mundi - Shortcut.lnk
+*.lnk
 node_modules/**
 production/**
-wp-root/
+**/wp-admin/
+**/wp-includes/
+assets/_archive/
