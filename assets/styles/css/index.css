@@ -1,0 +1,30 @@
+@import url("https://use.typekit.net/qxm4hdp.css");
+body {
+  background-color: black;
+  color: white;
+  font-family: "bc-sklonar", sans-serif;
+  margin: 0;
+}
+
+.fullscreen {
+  height: 100vh;
+  background: grey;
+  display: flex;
+  align-items: center;
+  padding-left: 10vw;
+  font-size: 8vw;
+  font-family: Kanit, sans-serif;
+}
+
+.dark {
+  background: #333;
+  color: #ccc;
+}
+
+.light {
+  background: #ccc;
+}
+
+.pink {
+  background: #fcf;
+}/*# sourceMappingURL=index.css.map */

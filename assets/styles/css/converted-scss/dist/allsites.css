@@ -1,0 +1,32 @@
+#allsites {
+  padding: 0px;
+  border-top: 2px white solid;
+  border-bottom: 2px white solid;
+  animation: flip-in-hor-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#allsites .content {
+  margin: auto;
+  animation: flip-in-hor-top 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 0.5s;
+}
+#allsites h2 {
+  font-variant: small-caps;
+  width: 100%;
+  text-align: right;
+}
+#allsites ul {
+  list-style: none;
+  background-color: var(--color1c);
+  border-left: 1px white double;
+  padding: 20px;
+  width: 100%;
+}
+#allsites ul li {
+  font-family: var(--body2);
+  text-transform: capitalize;
+  font-weight: 200;
+}
+#allsites svg .bg,
+#allsites svg .leaves1,
+#allsites svg .leaves2 {
+  opacity: 0.85;
+}

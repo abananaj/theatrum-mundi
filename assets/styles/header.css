@@ -1,0 +1,39 @@
+/* HEADER  */
+
+#header {
+    width:100%;
+    overflow: hidden;
+    --navitem-font: "source-code-variable";
+    --navitem-font-var: "wght" 100;
+    --navitem-font-var-hover:"wght" 200;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10;
+    background-color: 	rgba(49, 43, 54, .3);
+}
+.logotype {
+    height: 100%;
+}
+
+#header ul li a svg {
+    fill: var(--text-light);
+    height:2em;
+    transform: scale(0);
+    padding: 0 5px;
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.0);
+}
+
+#header ul li:hover a svg {
+    transform: scale(1);
+    height: 2em;
+}
+nav ul li {
+    height: 100%;
+}
+nav ul li a {
+    font-family: "source-code-variable";
+    font-weight: 100;
+    font-variation-settings: "wdth" 100;
+    text-transform: lowercase;
+}

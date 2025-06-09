@@ -1,0 +1,46 @@
+/*COLORS*/
+:root { 
+    --background:#211E24;
+    --background-alt:#FFF6C9;
+    --text:#211E24;
+    --text-alt:#FFF6C9;
+
+    --bs-primary: #370563; /*christalle*/
+    --color1: #370563; /*christalle*/
+    --color1a: #CEB6E3; /*prelude*/
+    --color1b: #AA95BD; /*amethystamoke*/
+    --color1c: #655673; /*smoky*/
+    --color1d: #270D40; /*valentino*/
+
+    --bs-secondary: #e6cb45;
+    --color2: #E6CB45; /*ronchi*/
+    --color2a: #C7BA77;
+    --color2b: #CCAA00;
+    --color2c:#7A6C26;
+    --color2d: #383110;
+
+    --color3:#C93849; /*flush-mahogony*/
+    --color3a: #FFC4CB;
+    --color3b:#9E6269;
+    --color3c:#70212A;
+    --color3d:#3D1116;
+
+    --color4: #F2E6AA; /*wheat*/
+    --color5: #B59DC9; /*logan*/
+
+    /*utilty*/
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f2f2f2;
+    --bs-dark: #212529;
+}
+
+
+/* BACKGROUND */
+
+html,
+body {
+    background-color: #161617;
+}

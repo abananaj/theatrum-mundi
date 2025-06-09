@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 173.2 173.6">
+  <g id="logo">
+    <g id="dark-mask">
+      <path d="M86.7,0v86.7H0V0h86.7ZM69.2,32.6H25.9c0,29.5,43.4,29.6,43.3,0Z" style="stroke-width: 0px;"/>
+      <path d="M100.8,54.7h43.3c.1-29.7-43.2-29.6-43.3,0Z" style="stroke-width: 0px;"/>
+      <path d="M173.2,86.7v6.1c0,61.4-53.5,81.3-86.7,80.8v-37.2c24.2-.2,51.6-15.7,53.9-36.8,0,0-53.7,0-53.7,0v-12.8h86.5Z" style="stroke-width: 0px;"/>
+      <path d="M86.5,136.4v-36.8c-26.5-.7-50.4,13.4-57.5,36.8h57.5Z" style="stroke-width: 0px;"/>
+    </g>
+    <g id="light-mask">
+      <path d="M86.7,0v86.7H0V0h86.7ZM69.2,32.6H25.9c0,29.5,43.4,29.6,43.3,0Z" style="fill: #fff; stroke-width: 0px;"/>
+      <path d="M100.8,54.7h43.3c.1-29.7-43.2-29.6-43.3,0Z" style="fill: #fff; stroke-width: 0px;"/>
+      <path d="M173.2,86.7v6.1c0,61.4-53.5,81.3-86.7,80.8v-37.2c24.2-.2,51.6-15.7,53.9-36.8,0,0-53.7,0-53.7,0v-12.8h86.5Z" style="fill: #fff; stroke-width: 0px;"/>
+      <path d="M86.5,136.4v-36.8c-26.5-.7-50.4,13.4-57.5,36.8h57.5Z" style="fill: #fff; stroke-width: 0px;"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>cheryl girard style guide</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.typekit.net/zrs0lzf.css">
+    <style>
+        @import url("https://use.typekit.net/xcu6jyb.css");
+
+        :root {
+            --sg-font: "allotrope-variable", sans-serif;
+            --sg-font-var: "wght" 100, "wdth" 50;
+            --sg-nav-li-var: "wght" 100, "wdth" 60;
+            --sg-color-var: "wght" 100, "wdth" 40;
+            --sg-body-var: "wght" 150, "wdth" 80;
+            --sg-specs-var: "wght" 100, "wdth" 50;
+        }
+
+        .sg,
+        .sg:hover {
+            color: #fff;
+            font-family: var(--sg-font);
+            font-variation-settings: var(--sg-font-var);
+            text-align: center;
+            transition: all 500ms ease-in-out 200ms;
+            display: none;
+        }
+
+        .sg:hover {
+            opacity: .5;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+
+        /* ===== COLOR BOXES ===== */
+        .palette {
+            gap: 2vw;
+            z-index: 1;
+        }
+
+        .palette .color {
+            transform-origin: center;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            z-index: 1;
+            margin: 2px 2px 20px 2px;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: rgba(149, 157, 165, 0.1) 0px 2pxpx 2px 2px;
+            -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+        #primary .color {
+            height: 175px;
+            width: 175px;
+
+        }
+
+        .palette .color:hover {
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 200px 200px;
+            transform: scale(1.33);
+            border-radius: 2%;
+            z-index: 100;
+            -webkit-animation: slide-in-fwd-center 1000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both 200ms;
+            animation: slide-in-fwd-center 1000ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both 200ms;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+        /* specs */
+        .color .spec {
+            font-size: 1rem;
+            margin: 2px 0;
+            transform: translate(0, -50%);
+            opacity: 0;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+        .color:hover .spec {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        /* color names */
+        .color .name {
+            opacity: 0;
+            text-transform: uppercase;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+        .color:hover .name {
+            opacity: 1;
+            transition: all 500ms ease-in-out 200ms;
+            transition-delay: 50ms;
+        }
+
+        /* role */
+        .color .role {
+            opacity: 0;
+            transition: all 500ms ease-in-out 200ms;
+        }
+
+        .color:hover .role {
+            opacity: 1;
+        }
+
+        /* PALETTE*/
+        .color1 {
+            background-color: var(--color1);
+        }
+
+        .color2 {
+            background-color: var(--color2);
+        }
+
+        .color3 {
+            background-color: var(--color3);
+        }
+
+        .color4 {
+            background-color: var(--color4);
+        }
+
+        .color5 {
+            background-color: var(--color5);
+        }
+
+        .color1a {
+            background-color: var(--color1a);
+        }
+
+        .color2a {
+            background-color: var(--color2a);
+        }
+
+        .color3a {
+            background-color: var(--color3a);
+        }
+
+        .color4a {
+            background-color: var(--color4a);
+        }
+
+        .color5a {
+            background-color: var(--color5a);
+        }
+
+        .color1b {
+            background-color: var(--color1b);
+        }
+
+        .color2b {
+            background-color: var(--color2b);
+        }
+
+        .color3b {
+            background-color: var(--color3b);
+        }
+
+        .color4b {
+            background-color: var(--color4b);
+        }
+
+        .color5b {
+            background-color: var(--color5b);
+        }
+
+        .color1c {
+            background-color: var(--color1c);
+        }
+
+        .color2c {
+            background-color: var(--color2c);
+        }
+
+        .color3c {
+            background-color: var(--color3c);
+        }
+
+        .color4c {
+            background-color: var(--color4c);
+        }
+
+        .color5c {
+            background-color: var(--color5c);
+        }
+
+        .color1d {
+            background-color: var(--color1d);
+        }
+
+        .color2d {
+            background-color: var(--color2d);
+        }
+
+        .color3d {
+            background-color: var(--color3d);
+        }
+
+        .color4d {
+            background-color: var(--color4d);
+        }
+
+        .color5d {
+            background-color: var(--color5d);
+        }
+
+        .color-info {
+            background-color: var(--bs-info);
+        }
+
+        .color-success {
+            background-color: var(--bs-success);
+        }
+
+        .color-danger {
+            background-color: var(--bs-danger);
+        }
+
+        .color-warning {
+            background-color: var(--bs-warning);
+        }
+
+        /* ===== FONT BOXES ===== */
+
+        .font-box {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 0;
+            width: 100%;
+            overflow: visible;
+        }
+
+        .font-box .specs {
+            opacity: 0;
+            transform: translate(-100%, 0);
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        .font-box:hover .specs {
+            opacity: .5;
+            transform: translate(0, 0);
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        #display-headings {
+
+            text-align: right;
+        }
+
+        #display-headings .font-box .specs {
+            text-align: right;
+            transform: translate(100%, 0);
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        #display-headings .font-box:hover .specs {
+            transform: translate(0, 0);
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        .blockquote .specs {
+            text-align: center;
+            width: 100%;
+        }
+
+        /* specs */
+        .font-box .specs .spec {
+            color: #fff;
+            position: relative;
+            opacity: 0;
+            bottom: 0;
+            font-size: 1rem;
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        .font-box:hover .specs .spec {
+            opacity: 1;
+            transition: 500ms ease-in-out 200ms;
+        }
+
+        .font-box .specs .spec svg {
+            height: .8em;
+            margin: 10px 5px;
+            fill: #ffffff;
+        }
+
+        .font-box img {
+            max-width: 300px;
+        }
+
+        .left {
+            position: relative;
+            left: 0;
+            text-align: left;
+        }
+
+        /* header */
+        :root {
+            --toggle-width: 70px;
+            --toggle-height: 60px;
+            --left-br: 0 6px 6px 0;
+            --right-br: 6px 0 0 6px;
+            --top-right-br: 0 0 0 6px;
+            --top-left-br: 0 0 6px 0;
+            /*z-index*/
+            --float-index: 1000;
+            --popup-index: 1000;
+            --toggle-index: 100;
+            --outline-width: 1px;
+            --opacity-instant: opacity 50ms linear;
+            --toggle-out: all 300ms cubic-bezier(0.77, 0, 0.175, 1), letter-spacing 500ms ease-out 100ms;
+            --toggle-in: all 600ms cubic-bezier(0.77, 0, 0.175, 1) 100ms, letter-spacing 200ms ease-in 100ms;
+        }
+
+        #menuWrap {
+            position: fixed;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: right;
+            top: 0;
+            left: 0;
+            border-radius: 5px;
+            z-index: var(--float-index);
+        }
+
+        #menuToggle {
+            padding: 5px;
+            cursor: pointer;
+            z-index: var(--toggle-index);
+            height: var(--toggle-height);
+            width: var(--toggle-width);
+            transition: var(--toggle-out);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #menu {
+            box-sizing: border-box;
+            position: fixed;
+            background-color: #031842;
+            transition: var(--toggle-out);
+
+            height: auto;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 15px 0 15px 15px;
+            z-index: 1;
+            border-radius: 0 0 0 5px;
+            transform: translate(-100%, 0);
+            transition: var(--toggle-out);
+        }
+
+        #menu.active {
+            transform: translate(0, 0);
+        }
+
+        #menu h1 {
+            font-size: 2rem;
+        }
+
+        #menu svg path {
+            fill: white;
+        }
+    </style>
+
+    <!-- PROJECT STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="saturation-wipe">
+        <div id="button">Hover</div>
+        <div id="back"></div>
+        <div id="overlay"></div>
+    </div>
+
+
+    <main>
+        <!-- TYPOGRAPHY -->
+        <div id="typography">
+            <h2 class="sg display-1 border-top border-bottom my-5">Typography</h2>
+
+            <div class="container-fluid">
+                <div id="headings" class="container my-3">
+                    <div class="font-box">
+                        <h1>Heading&nbsp;1</h1>
+                    </div>
+                    <div class="font-box">
+                        <h2>Heading 2</h2>
+                    </div>
+                    <div class="font-box">
+                        <h3>Heading 3</h3>
+                    </div>
+                    <div class="font-box">
+                        <h4>Heading 4</h4>
+                    </div>
+                    <div class="font-box">
+                        <h5>Heading 5</h5>
+                    </div>
+                    <div class="font-box">
+                        <h6>Heading 6</h6>
+                    </div>
+                </div>
+                <!-- <div id="display-headings" class="container-fluid d-flex flex-column py-5 my-1 w-60">
+                    <div class="font-box">
+                        <h1 class="display-1">Heading&nbsp;1</h1>
+                    </div>
+                    <div class="font-box">
+                        <h2 class="display-2">Heading 2</h2>
+                    </div>
+                    <div class="font-box">
+                        <h3 class="display-3">Heading 3</h3>
+                    </div>
+                    <div class="font-box">
+                        <h4 class="display-4">Heading 4</h4>
+                    </div>
+                </div> -->
+            </div>
+
+            <div id="body" class="container my-3">
+                <!-- LEAD  -->
+                <div class="font-box">
+                    <p class="lead">
+                        This is a lead paragraph. It stands out from regular paragraphs.
+                    </p>
+                </div>
+                <!-- BODY 1 -->
+                <div class="font-box">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </p>
+
+                </div>
+
+                <!-- BODY 2 -->
+                <div class="font-box body2">
+                    <p class="lead">
+                        This is a lead paragraph. It stands out from regular paragraphs.
+                    </p>
+                </div>
+                <div class="font-box">
+                    <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborum.
+                    </p>
+
+                </div>
+
+            </div>
+            <div id="buttons">
+                <div class="container d-flex"> 
+                    <a href="#" class="btn btn-primary">Primary</a>
+                    <a href="#" class="btn btn-secondary">secondary</a>
+                    <a href="#" class="btn btn-tertiary">tertiary</a>
+                    <a href="#" class="btn btn-success">success</a>
+                    <a href="#" class="btn btn-danger">danger</a>
+                    <a href="#" class="btn btn-warning">warning</a>
+    
+                </div>
+
+
+
+            </div>
+            <div id="special" class="container p-5 my-1">
+                <div class="container-fluid">
+                    <!-- BLOCKQUOTE -->
+                    <div class="font-box pb-5">
+                        <figure class="quote">
+                            <blockquote>
+                                He that makes shoes goes barefoot himself.</p>
+                            </blockquote>
+                            <figcaption>
+                                Robert Burton <cite title="Source Title">Anatomy of
+                                    Melancholy, 1621</cite>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                    <!-- ACCENT -->
+                    <div class="font-box">
+                        <p class="accent"><em>Accented text &mdash; Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit...</em></p>
+                    </div>
+                    <!-- CAPTION -->
+                    <div class="font-box d-flex flex-column">
+
+                        <img src="https://placehold.co/300x200" alt="placeholder image">
+                        <p class="caption">Caption &mdash; Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- COLORS -->
+        <div id="colors">
+            <h2 class="sg display-1 border-top border-bottom my-5">Colors</h2>
+            <div class="container-fluid">
+                <div id="hero" class="sg text-focus-in">
+                </div>
+                <div class="container-fluid">
+                    <section id="palettes" class="container-fluid">
+                        <div id="primary"
+                            class="palette container-fluid d-flex flex-row align-items-between justify-content-center flex-nowrap">
+                            <div class="color5 color d-flex flex-column justify-content-center text-light"></div>
+                            <div class="color1 color d-flex flex-column justify-content-center"> </div>
+                            <div class="color2 color d-flex flex-column justify-content-center text-dark"> </div>
+                            <div class="color3 color d-flex flex-column justify-content-center text-dark"></div>
+                            <div class="color4 color d-flex flex-column justify-content-center text-light"></div>
+                        </div>
+                        <div id="colora"
+                            class="palette container-fluid d-flex flex-row align-items-between justify-content-center flex-nowrap">
+                            <div class="color1a color d-flex flex-column justify-content-center"></div>
+                            <div class="color2a color d-flex flex-column justify-content-center text-dark"></div>
+                            <div class="color3a color d-flex flex-column justify-content-center text-dark"></div>
+                        </div>
+                        <div id="colorb"
+                            class="palette container-fluid d-flex flex-row align-items-between justify-content-center flex-nowrap">
+                            <div class="color1b color d-flex flex-column justify-content-center"></div>
+                            <div class="color2b color d-flex flex-column justify-content-center text-dark"></div>
+                            <div class="color3b color d-flex flex-column justify-content-center text-dark"></div>
+                        </div>
+                        <div id="colorc"
+                            class="palette container-fluid d-flex flex-row align-items-between justify-content-center flex-nowrap">
+                            <div class="color1c color d-flex flex-column justify-content-center"></div>
+                            <div class="color2c color d-flex flex-column justify-content-center text-dark"></div>
+                            <div class="color3c color d-flex flex-column justify-content-center text-dark"></div>
+                        </div>
+                        <div id="colord"
+                            class="palette container-fluid d-flex flex-row align-items-between justify-content-center flex-nowrap">
+                            <div class="color1d color d-flex flex-column justify-content-center"></div>
+                            <div class="color2d color d-flex flex-column justify-content-center text-dark"></div>
+                            <div class="color3d color d-flex flex-column justify-content-center text-dark"></div>
+                        </div>
+                        <div class="color-info color d-flex flex-column justify-content-center">
+                            <div class="color-success color d-flex flex-column justify-content-center"> </div>
+                            <div class="color-warning color d-flex flex-column justify-content-center"></div>
+                        </div>
+                        <div class="color-danger color d-flex flex-column justify-content-center"></div>
+
+                </div>
+                </section>
+            </div>
+        </div>
+
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

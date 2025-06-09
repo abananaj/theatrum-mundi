@@ -1,0 +1,12 @@
+@import url("https://use.typekit.net/wqa0llu.css");
+/* variable fonts */
+@import url("https://use.typekit.net/bmw4zvq.css");
+body {
+  background-color: #211e24;
+  font-size: calc(16px + 0.390625vw);
+  line-height: 1.3em;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
