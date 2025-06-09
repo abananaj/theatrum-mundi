@@ -1,0 +1,120 @@
+.listgroup {
+    list-style: none;
+    padding-left: 0px;
+    background-color: none;
+    flex-wrap: wrap;
+}
+
+.listgroup .col .row {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    background-color: none;
+}
+
+.listgroup .col {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    background-color: none;
+}
+.listgroup ul li {
+    width: 100%;
+    padding-left: 0px;
+    background-color: none;
+}
+
+.listgroup h2 {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* sublists */
+
+
+.listgroup h3 {
+    width: 100%;
+    text-align: center;
+    font-family: "source-code-variable", monotype;
+    font-variation-settings: "wght" 200;
+    font-size: 1.125rem;
+    padding: 10px;
+}
+
+.listgroup ul li ul {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+}
+
+.listgroup ul li ul li {
+    opacity: 0;
+    font-family: "source-code-variable", monotype;
+    font-variation-settings: "wght" 400;
+}
+
+.listgroup ul li:hover ul li {
+    opacity: 1;
+    font-family: "source-code-variable", monotype;
+    font-variation-settings: "wght" 400;
+}
+
+/* bootstrap list groups */
+
+.list-group li {
+    background-color: none;
+}
+#allsites svg .bg,
+#allsites svg .leaves1,
+#allsites svg .leaves2
+ {
+    opacity:.85;
+}
+#allsites {
+    padding: 0px;
+    border-top: 2px white solid;
+    border-bottom: 2px white solid;
+    animation: flip-in-hor-top .5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+#allsites .content {
+    margin: auto;
+    animation: flip-in-hor-top .75s cubic-bezier(.25, .46, .45, .94) both .5s;
+}
+
+#allsites h2 {
+    font-variant: small-caps;
+    width: 100%;
+    text-align: right;
+}
+#allsites ul {
+    list-style: none;
+    background-color: var(--color1c);
+    border-left: 1px white double;
+    padding: 20px;
+    width: 100%;
+}
+#allsites li {
+    font-family: var(--body2);
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+@keyframes flip-in-hor-top {
+    0% {
+        transform: rotateX(-80deg);
+        transform-origin: bottom center;   
+        opacity: 0
+    }
+
+    100% {
+        transform: rotateX(0);
+        opacity: 1
+    }
+}

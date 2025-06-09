@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5962.9 796.9">
+  <g id="horizontal1">
+    <g id="white-background" style="opacity: .2;">
+      <rect id="top-right-square" x="200.3" y="199.7" width="200.3" height="200.3" style="fill: #fff;"/>
+      <path id="face" d="m200.3,399.7V.2C123.6-.9-3,46.8.3,186.2c0,70.1-.5,143.2,0,213.5h200Z" style="fill: #fff;"/>
+    </g>
+    <g id="white-background-2" data-name="white-background">
+      <rect id="top-right-square-2" data-name="top-right-square" x="200.7" y="396.9" width="200.3" height="200.3" style="fill: #fff;"/>
+      <path id="face-2" data-name="face" d="m200.7,397.5v399.4c-76.8,1.1-203.4-46.6-200-185.9,0-70.1-.5-143.2,0-213.5h200Z" style="fill: #fff;"/>
+    </g>
+    <g id="bottom-stack">
+      <path id="stack1" d="m200.7,597.2v199.7c76.9,1.2,203.5-58.5,200.2-200.3"/>
+    </g>
+    <g id="top-stack">
+      <polygon id="stack1-2" data-name="stack1" points=".5 396.9 .5 588.3 .5 597.2 200.7 597.2 200.7 396.9 187.4 396.9 .5 396.9"/>
+    </g>
+    <path id="left-eye" d="m62.8,526.9c.7.4,96.4.4,99.8.4-.1-68.3-100.2-68.7-99.8-.4Z" style="fill: #fff;"/>
+    <path id="right-eye" d="m226.7,476.4c.7-.4,96.4-.4,99.8-.4-.1,68.3-100.2,68.7-99.8.4"/>
+    <path id="left-mouth" d="m77.2,642.2c0-.4,124.6-.4,124.6-.4v84.9c-48.6,3.6-119.2-35.8-124.6-84.5Z"/>
+    <path id="right-mouth" d="m323,724.2c0,.4-122.3.4-122.3.4v-84.3c47.7-3.6,117,35.6,122.3,84Z" style="fill: #fff;"/>
+    <g id="title">
+      <g id="mundi">
+        <path id="t" d="m714.4,471.9h-9.8v166.4h35.7v146.4h-254.4v-146.4h35.7v-166.4h-9.8v124.8h-81.1v-200.2h364.8v200.2h-81.1v-124.8Z"/>
+        <path id="h" d="m812.6,638.8h35.2v-96.5h-35.2v-145.9h218.3v145.9h9.8v-145.9h218.3v145.9h-35.2v96.5h35.2v145.9h-218.3v-145.9h-9.8v145.9h-218.3v-145.9Z"/>
+        <path id="e" d="m1627.8,396.5v185.8h-54.7l-24.9-39.9h-46.9v9.4h36.6v77.1h-36.6v9.4h46.9l24.9-39.9h54.7v186.3h-352.1v-146.4h42.5v-95.9h-42.5v-145.9h352.1Z"/>
+        <g>
+          <path id="a" d="m1800.7,627.8l-4.9,10.5h62.5v146.4h-215.8v-146.4h81.5l53.7-95.9h-65v-145.9h333v241.8h38.1v146.4h-215.9v-146.4h88.9v-10.5h-156.3Z"/>
+          <polygon points="1901.9 477.6 1860.8 573.5 1867.6 573.5 1908.7 477.6 1901.9 477.6" style="fill: #fff;"/>
+        </g>
+        <path id="t2" d="m2359,471.9h-9.8v166.4h35.7v146.4h-254.4v-146.4h35.7v-166.4h-9.8v124.8h-81.1v-200.2h364.8v200.2h-81.1v-124.8Z"/>
+        <path id="r" d="m2867.4,638.3v146.4h-205.1l-91.8-146.4h-12.2l91.8,146.4h-193.9v-146.4h42.5v-95.9h-42.5v-145.9h181.2l96.2,145.9h12.2l-96.2-145.9h57.6c97.2,0,145.5,66.5,145.5,132.5s-18.6,85.4-57.1,109.2h71.8Z"/>
+        <path id="u" d="m3091.6,396.5h214.4v145.9h-32.7v83.7c0,117.6-93.3,169.7-186.5,169.7s-186.5-52.1-186.5-169.7v-83.7h-32.7v-145.9h214.4v291.7h9.8v-291.7Z"/>
+        <path id="m" d="m3286.6,784.7v-146.4h79.6l55.7-95.9h-65v-145.9h239.8l-217.3,388.2h-92.8Zm416.6-242.3l-132.3,242.3h-180.2l217.8-388.2h216.3v145.9h-38.6v95.9h38.1v146.4h-241.3l131.9-242.3h-11.7Z"/>
+      </g>
+      <g id="theatrum">
+        <path id="m2" d="m3823.7,785.4v-146.4h79.6l55.7-95.9h-65v-145.9h239.8l-217.3,388.2h-92.8Zm416.6-242.3l-132.3,242.3h-180.2l217.8-388.2h216.3v145.9h-38.6v95.9h38.1v146.4h-241.3l131.9-242.3h-11.7Z"/>
+        <path id="u2" d="m4599.7,397.2h214.4v145.9h-32.7v83.7c0,117.6-93.3,169.7-186.5,169.7s-186.5-52.1-186.5-169.7v-83.7h-32.7v-145.9h214.4v291.7h9.8v-291.7Z"/>
+        <path id="d" d="m5177,638.4h11.2l-121.6-241.2h199.7v145.9h-42.5v242.3h-183.6l-126-242.3h-12.2l126,242.3h-200.2v-146.4h41.5v-95.9h-41.5v-145.9h227.6l121.6,241.2Z"/>
+        <path id="n" d="m5281.1,785.4v-146.4h41.5v-95.9h-41.5v-145.9h258.3c96.7,0,160.7,75.4,160.7,194.1s-63.5,194.1-160.7,194.1h-258.3Zm234.4-294.5h-9.8v198h9.8v-198Z"/>
+        <path id="i" d="m5708.5,639h35.6v-95.9h-35.6v-145.9h254.4v145.9h-35.6v95.9h35.6v146.4h-254.4v-146.4Z"/>
+      </g>
+    </g>
+    <g id="bottom-stack-2" data-name="bottom-stack" style="opacity: .2;">
+      <path id="stack1-3" data-name="stack1" d="m200.3,199.7V0c76.9-1.2,203.5,58.5,200.2,200.3"/>
+    </g>
+    <g id="top-stack-2" data-name="top-stack" style="opacity: .2;">
+      <polygon id="stack1-4" data-name="stack1" points="0 399 0 207.6 0 198.7 200.3 198.7 200.3 399 186.9 399 0 399"/>
+    </g>
+    <path id="left-eye-2" data-name="left-eye" d="m62.4,269c.7-.4,96.4-.4,99.8-.4-.1,68.3-100.2,68.7-99.8.4Z" style="fill: #fff; opacity: .2;"/>
+    <path id="right-eye-2" data-name="right-eye" d="m226.3,319.5c.7.4,96.4.4,99.8.4-.1-68.3-100.2-68.7-99.8-.4" style="opacity: .2;"/>
+    <path id="left-mouth-2" data-name="left-mouth" d="m76.8,154.7c0,.4,124.6.4,124.6.4v-84.9c-48.6-3.6-119.2,35.8-124.6,84.5Z" style="opacity: .2;"/>
+    <path id="right-mouth-2" data-name="right-mouth" d="m322.6,72.7c0-.4-122.3-.4-122.3-.4v84.3c47.7,3.6,117-35.6,122.3-84Z" style="fill: #fff; opacity: .2;"/>
+    <g id="title-2" data-name="title" style="opacity: .2;">
+      <g id="mundi-2" data-name="mundi">
+        <path id="t-2" data-name="t" d="m714,325h-9.8v-166.4h35.7V12.2h-254.4v146.4h35.7v166.4h-9.8v-124.8h-81.1v200.2h364.8v-200.2h-81.1v124.8Z"/>
+        <path id="h-2" data-name="h" d="m812.2,158.1h35.2v96.5h-35.2v145.9h218.3v-145.9h9.8v145.9h218.3v-145.9h-35.2v-96.5h35.2V12.2h-218.3v145.9h-9.8V12.2h-218.3v145.9Z"/>
+        <path id="e-2" data-name="e" d="m1627.3,400.4v-185.8h-54.7l-24.9,39.9h-46.9v-9.4h36.6v-77.1h-36.6v-9.4h46.9l24.9,39.9h54.7V12.2h-352.1v146.4h42.5v95.9h-42.5v145.9h352.1Z"/>
+        <g>
+          <path id="a-2" data-name="a" d="m1800.2,169.2l-4.9-10.5h62.5V12.2h-215.8v146.4h81.5l53.7,95.9h-65v145.9h333v-241.8h38.1V12.2h-215.9v146.4h88.9v10.5h-156.3Z"/>
+          <polygon points="1901.4 319.3 1860.3 223.5 1867.2 223.5 1908.2 319.3 1901.4 319.3" style="fill: #fff;"/>
+        </g>
+        <path id="t2-2" data-name="t2" d="m2358.5,325h-9.8v-166.4h35.7V12.2h-254.4v146.4h35.7v166.4h-9.8v-124.8h-81.1v200.2h364.8v-200.2h-81.1v124.8Z"/>
+        <path id="r-2" data-name="r" d="m2866.9,158.6V12.2h-205.1l-91.8,146.4h-12.2l91.8-146.4h-193.9v146.4h42.5v95.9h-42.5v145.9h181.2l96.2-145.9h12.2l-96.2,145.9h57.6c97.2,0,145.5-66.5,145.5-132.5s-18.6-85.4-57.1-109.2h71.8Z"/>
+        <path id="u-2" data-name="u" d="m3091.1,400.4h214.4v-145.9h-32.7v-83.7c0-117.6-93.3-169.7-186.5-169.7s-186.5,52.1-186.5,169.7v83.7h-32.7v145.9h214.4V108.7h9.8v291.7Z"/>
+        <path id="m-2" data-name="m" d="m3286.1,12.2v146.4h79.6l55.7,95.9h-65v145.9h239.8L3378.9,12.2h-92.8Zm416.6,242.3l-132.3-242.3h-180.2l217.8,388.2h216.3v-145.9h-38.6v-95.9h38.1V12.2h-241.3l131.9,242.3h-11.7Z"/>
+      </g>
+      <g id="theatrum-2" data-name="theatrum">
+        <path id="m2-2" data-name="m2" d="m3823.2,11.5v146.4h79.6l55.7,95.9h-65v145.9h239.8L3916,11.5h-92.8Zm416.6,242.3l-132.3-242.3h-180.2l217.8,388.2h216.3v-145.9h-38.6v-95.9h38.1V11.5h-241.3l131.9,242.3h-11.7Z"/>
+        <path id="u2-2" data-name="u2" d="m4599.3,399.7h214.4v-145.9h-32.7v-83.7c0-117.6-93.3-169.7-186.5-169.7s-186.5,52.1-186.5,169.7v83.7h-32.7v145.9h214.4V108h9.8v291.7Z"/>
+        <path id="d-2" data-name="d" d="m5176.6,158.5h11.2l-121.6,241.2h199.7v-145.9h-42.5V11.5h-183.6l-126,242.3h-12.2l126-242.3h-200.2v146.4h41.5v95.9h-41.5v145.9h227.6l121.6-241.2Z"/>
+        <path id="n-2" data-name="n" d="m5280.7,11.5v146.4h41.5v95.9h-41.5v145.9h258.3c96.7,0,160.7-75.4,160.7-194.1s-63.5-194.1-160.7-194.1h-258.3Zm234.4,294.5h-9.8V108h9.8v198Z"/>
+        <image id="i-2" data-name="i" width="256" height="390" transform="translate(5707.3 10.7)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAGGCAYAAACUm1+jAAAACXBIWXMAAAsSAAALEgHS3X78AAAEv0lEQVR4nO3WgQkEIRAEwfHzz9mL4kHoqgiU1WbPtjsg6Wfs0CUAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAECYAEHYevPp94AzwL0/9ORsAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhJ1t1wOAJhsAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAhAkAVG37AC3iBgjvkzDMAAAAAElFTkSuQmCC"/>
+      </g>
+    </g>
+  </g>
+</svg>

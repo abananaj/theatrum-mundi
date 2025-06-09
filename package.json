@@ -1,7 +1,44 @@
 {
-  "dependencies": {
+  "name": "theatrum_mundi",
+  "version": "2.0.0",
+  "author": "Anna Jennings",
+  "homepage": "https://theatum.design",
+  "description": "Webpack config with SASS, bootstrap, typescript, babel",
+  "keywords": ["webpack", "sass", "bootstrap", "babel", "gsap"],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abananaj/theatrum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abananaj/theatrum/issues"
+  },
+  "main": "./development/index.js",
+  "scripts": {
+    "production": "webpack --config webpack.prod.js --mode production",
+    "build": "webpack --config webpack.dev.js --mode production -w",
+    "serve": "webpack-dev-server --config webpack.dev.js --mode development --open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
     "bootstrap": "^5.3.6",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
     "gsap": "^3.13.0",
-    "locomotive-scroll": "^5.0.0-beta.21"
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "locomotive-scroll": "^5.0.0-beta.21",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.89.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
   }
 }
