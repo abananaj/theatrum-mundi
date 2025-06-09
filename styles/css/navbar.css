@@ -1,8 +1,4 @@
-#page {
-  height: 300vh;
-}
-
-body > .navToggle {
+.navToggle {
   visibility: hidden;
 }
 
@@ -11,7 +7,6 @@ body > .navToggle {
   --width: 300px;
   --space: 10px;
   z-index: 100;
-  visibility: hidden;
   height: 300px;
   position: fixed;
   bottom: 0;
@@ -20,14 +15,12 @@ body > .navToggle {
   width: 300px;
 }
 #navbar nav ul {
-  padding: 0;
   margin: 0;
   position: absolute;
   display: flex;
-  flex-flow: row nowrap;
   left: var(--width);
   bottom: 0;
-  gap: 0;
+  gap: 1rem;
   z-index: 9;
 }
 #navbar nav ul li {
