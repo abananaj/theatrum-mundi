@@ -1,0 +1,51 @@
+.fullscreen {
+	height:100vh;
+	background:grey;
+	display:flex;
+	align-items:center;
+	padding-left:10vw;
+	font-size:8vw;
+	font-family:Kanit, sans-serif;
+}
+body { margin:0; }
+.dark { background:#333; color:#ccc; }
+.light { background:#ccc; }
+.pink {
+	background:#fcf;
+}
+
+/* SNIPPET CSS */
+:root{--btt-height:20vw;--btt-width:30vw;}
+.bttWrap {
+  visibility: hidden;
+  height:var(--btt-height);
+  position: fixed;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--btt-width);
+/*   overflow:hidden; */
+}
+
+.bttWrap img {
+	position:absolute;
+	height:var(--btt-height);
+}
+.link{
+	position:absolute;
+  width: var(--btt-width);
+	overflow:hidden;
+	display:flex;
+	align-items:center;
+	left:calc(var(--btt-width) * 0.25);
+	bottom:0;
+}
+a {
+	font-size:1.2rem;
+  width: calc(var(--btt-width) * 0.6);
+	color:#f60;
+	background:black;
+	text-align:right;
+	padding:1vw 2vw;
+	border-radius:0 calc(var(--btt-width) / 30) calc(var(--btt-width) / 30) 0;	
+}
