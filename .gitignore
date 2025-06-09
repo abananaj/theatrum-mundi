@@ -1,2 +1,4 @@
 *.log
 Theatrum Mundi - Shortcut.lnk
+node_modules/**
+production/**
