@@ -1,2 +1,6 @@
 *.log
 Theatrum Mundi - Shortcut.lnk
+assets/_archive/
+**/wp-admin/
+**/wp-include/
+**/node_modules/
