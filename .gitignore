@@ -1,6 +1,11 @@
 *.log
-Theatrum Mundi - Shortcut.lnk
+*.lnk
+*.ini
+node-modules/
+production/
 assets/_archive/
+assets/videos/
+assets/pens/
 **/wp-admin/
 **/wp-includes/
 **/node_modules/
