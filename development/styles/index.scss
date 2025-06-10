@@ -1,0 +1,37 @@
+@import url("https://use.typekit.net/qxm4hdp.css");
+@import url("sass/colors.scss");
+@import url("sass/typography.scss");
+$bc-sklonar: "bc-sklonar",sans-serif;
+$sirenne-six-mvb: "sirenne-six-mvb",serif;
+$sirenne-six-mvb-roman-small: "sirenne-six-mvb-roman-small",serif;
+$p22-elizabethan: "p22-elizabethan",sans-serif;
+
+	$height: 300px;
+	$width: 300px;
+	$space: 10px;
+
+body {
+  background-color: black;
+  color: white;
+    font-family: $bc-sklonar;
+  margin: 0;
+}
+.fullscreen {
+  height: 100vh;
+  background: grey;
+  display: flex;
+  align-items: center;
+  padding-left: 10vw;
+  font-size: 8vw;
+  font-family: Kanit, sans-serif;
+}
+.dark {
+  background: #333;
+  color: #ccc;
+}
+.light {
+  background: #ccc;
+}
+.pink {
+  background: #fcf;
+}

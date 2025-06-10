@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-
 import LocomotiveScroll from 'locomotive-scroll';
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -54,9 +54,7 @@ const splitName = new SplitText("h1", {
 const splitJL = new SplitText(".JL", {
     type: "chars"
 });
-
 const nameTL = gsap.timeline();
-
 nameTL
     .set("h1", { scale: 1.4 })
     .from(splitName.chars, {
@@ -116,9 +114,7 @@ gsap.from("p", {
     duration: 1,
     ease: "power3.out"
 });
-
 //PINNING
-
 gsap.to(".pinQuote", {
     yPercent: -100,
     ease: "none",
@@ -131,5 +127,11 @@ gsap.to(".pinQuote", {
         pin: true
     }
 });
-
 gsap.set(".pinQuote", { zIndex: (i, target, targets) => targets.length - i });
+window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
+
+gsap.to(".panel", {
+	scaleY: 0,
+	duration: 1.65,
+	ease: "power4.inOut"
+});
