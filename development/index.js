@@ -3,7 +3,7 @@ console.log('hello from index.js');
 
 // MODULE TEST
 import { testModule } from "./scripts/test-module";
-import "./index.scss";
+import "./styles/index.scss";
 console.log(testModule);
 
 // BABEL TEST

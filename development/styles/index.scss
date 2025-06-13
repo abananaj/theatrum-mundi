@@ -1,37 +1,283 @@
+// ADOBE FONTS
 @import url("https://use.typekit.net/qxm4hdp.css");
-@import url("sass/colors.scss");
-@import url("sass/typography.scss");
-$bc-sklonar: "bc-sklonar",sans-serif;
-$sirenne-six-mvb: "sirenne-six-mvb",serif;
-$sirenne-six-mvb-roman-small: "sirenne-six-mvb-roman-small",serif;
-$p22-elizabethan: "p22-elizabethan",sans-serif;
 
-	$height: 300px;
-	$width: 300px;
-	$space: 10px;
+$height: 300px;
+$width: 300px;
+$space: 10px;
 
 body {
-  background-color: black;
-  color: white;
-    font-family: $bc-sklonar;
   margin: 0;
 }
+
 .fullscreen {
   height: 100vh;
-  background: grey;
   display: flex;
   align-items: center;
   padding-left: 10vw;
   font-size: 8vw;
-  font-family: Kanit, sans-serif;
+}
+
+//  //  ========= TYPOGRAPHY
+// ========== @import url("sass/typography.scss"); ========== USE@() ???
+$bc-sklonar: "bc-sklonar", sans-serif;
+$sirenne-six-mvb: "sirenne-six-mvb", serif;
+$sirenne-six-mvb-roman-small: "sirenne-six-mvb-roman-small", serif;
+$p22-elizabethan: "p22-elizabethan", sans-serif;
+
+body {
+  font-family: $bc-sklonar;
+}
+
+// // =========== THEME COLOR VARIABLES
+// ========== @import url("sass/colors.scss"); ========== USE@() ???
+$paprika: #990033;
+$black-rose: #660033;
+$athens-gray: #f0f2f5;
+$tiber: #003333;
+$blue-stone: #006664;
+
+body {
+  background-color: $tiber;
+  color: $athens-gray;
+}
+.fullscreen {
+  background: #838383;
 }
 .dark {
-  background: #333;
-  color: #ccc;
+  background: $tiber;
+  color: #f0f2f5;
 }
 .light {
-  background: #ccc;
+  background: #f0f2f5;
 }
 .pink {
-  background: #fcf;
+  background: #f1d9e1;
 }
+
+// BOOTSTRAP FUNCTIONS
+// ===========  1. functions first
+@import "/node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here - redefine variables not dependent on anything else
+
+// GLOBAL VARIABLES
+$enable-negative-margins: true;
+$enable-smooth-scroll: true;
+
+
+// ========== @import url("sass/colors.scss"); ========== USE@() ???
+
+// theme color variables
+$primary: $paprika;
+$secondary: $black-rose;
+// add m ore
+$light: $athens-gray;
+
+// font family
+$font-family-base: $bc-sklonar;
+
+// font sizes
+$font-size-base: 1rem;
+$lead-font-size: $font-size-base * 1.5;
+
+// headings
+$headings-font-weight: 300;
+$headings-line-height: 1.5;
+$h1-font-size: $font-size-base * 2.75;
+
+// links
+$link-color: $secondary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$link-shade-percentage: 30%;
+$link-hover-color: shift-color($link-color, -$link-shade-percentage);
+
+// breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 700px,
+  lg: 900px,
+  xl: 1100px,
+  xxl: 1300px,
+);
+
+// spacers
+$spacer: 1.5rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 4,
+);
+
+// borders
+// $border-width: 3px;
+$border-widths: (
+  1: 1px,
+  2: 3px,
+  3: 5px,
+  4: 7px,
+  5: 9px,
+);
+$border-color: $primary;
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "/node_modules/bootstrap/scss/variables";
+@import "/node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// add colors to theme
+$custom-colors: (
+  "primary-light": #fff8fb,
+  "secondary-light": #f6fffb,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// remove colors from theme
+$theme-colors: map-remove($theme-colors, "danger");
+
+// add classes for color pallette colors
+@each $color, $val in $colors {
+  .bg-#{$color} {
+    background-color: $val;
+  }
+  .bg-#{$color}-light {
+    background-color: tint-color($val, 80%);
+  }
+  .bg-#{$color}-dark {
+    background-color: shade-color($val, 30%);
+  }
+  .text-#{$color} {
+    color: $val;
+  }
+  .text-#{$color}-light {
+    color: tint-color($val, 80%);
+  }
+  .text-#{$color}-dark {
+    color: shade-color($val, 30%);
+  }
+}
+
+// add display heading
+$custom-display-font-sizes: (
+  7: 2rem,
+);
+$display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
+
+// 5. Include remainder of required parts
+@import "/node_modules/bootstrap/scss/maps";
+@import "/node_modules/bootstrap/scss/mixins";
+@import "/node_modules/bootstrap/scss/utilities";
+// ???? @import "/node_modules/bootstrap/scss/root";
+
+// 6. Include any other optional stylesheet partials for layout & components
+// ??? @import "/node_modules/bootstrap/scss/utilities";
+@import "/node_modules/bootstrap/scss/root";
+@import "/node_modules/bootstrap/scss/reboot";
+@import "/node_modules/bootstrap/scss/type";
+@import "/node_modules/bootstrap/scss/images";
+@import "/node_modules/bootstrap/scss/containers";
+@import "/node_modules/bootstrap/scss/grid";
+@import "/node_modules/bootstrap/scss/root";
+@import "/node_modules/bootstrap/scss/reboot";
+@import "/node_modules/bootstrap/scss/type";
+@import "/node_modules/bootstrap/scss/images";
+@import "/node_modules/bootstrap/scss/containers";
+@import "/node_modules/bootstrap/scss/grid";
+@import "/node_modules/bootstrap/scss/tables";
+@import "/node_modules/bootstrap/scss/forms";
+@import "/node_modules/bootstrap/scss/buttons";
+@import "/node_modules/bootstrap/scss/transitions";
+@import "/node_modules/bootstrap/scss/dropdown";
+@import "/node_modules/bootstrap/scss/button-group";
+@import "/node_modules/bootstrap/scss/nav";
+@import "/node_modules/bootstrap/scss/navbar";
+@import "/node_modules/bootstrap/scss/card";
+@import "/node_modules/bootstrap/scss/accordion";
+@import "/node_modules/bootstrap/scss/breadcrumb";
+@import "/node_modules/bootstrap/scss/pagination";
+@import "/node_modules/bootstrap/scss/badge";
+@import "/node_modules/bootstrap/scss/alert";
+@import "/node_modules/bootstrap/scss/progress";
+@import "/node_modules/bootstrap/scss/list-group";
+@import "/node_modules/bootstrap/scss/close";
+@import "/node_modules/bootstrap/scss/toasts";
+@import "/node_modules/bootstrap/scss/modal";
+@import "/node_modules/bootstrap/scss/tooltip";
+@import "/node_modules/bootstrap/scss/popover";
+@import "/node_modules/bootstrap/scss/carousel";
+@import "/node_modules/bootstrap/scss/spinners";
+@import "/node_modules/bootstrap/scss/offcanvas";
+@import "/node_modules/bootstrap/scss/placeholders";
+
+// helpers
+@import "/node_modules/bootstrap/scss/helpers";
+// ...
+
+// adding utilities
+$custom-utilities: (
+  "rotate": (
+    property: transform,
+    class: rotate,
+    values: (
+      0: rotate(0deg),
+      20: rotate(20deg),
+      40: rotate(40deg),
+      60: rotate(60deg),
+      80: rotate(80deg),
+      100: rotate(100deg),
+      120: rotate(120deg),
+      140: rotate(140deg),
+      160: rotate(160deg),
+      180: rotate(180deg),
+    ),
+  ),
+  "opacity": (
+    property: opacity,
+    class: o,
+    state: hover,
+    values: (
+      0: 0,
+      25: 0.25,
+      50: 0.5,
+      75: 0.75,
+      100: 1,
+    ),
+  ),
+);
+$utilities: map-merge($utilities, $custom-utilities);
+
+// modifying utilities
+$modified-utilities: (
+  "border-bottom": (
+    property: border-bottom,
+    values: (
+      null: $border-width dashed $border-color,
+      0: 0,
+    ),
+  ),
+  "display":
+    map-merge(
+      map-get($utilities, "display"),
+      (
+        class: dis,
+      )
+    ),
+);
+
+$utilities: map-merge($utilities, $modified-utilities);
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "/node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+// IMPORT WHOLE BOOTSTRAP LIBRARY?
+// @import "/node_modules/bootstrap/scss/bootstrap";
+
+@import url("sass/color-mode-toggle.scss");
