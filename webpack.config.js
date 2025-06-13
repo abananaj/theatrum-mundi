@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "development/template.html"),
+      favicon: path.resolve(__dirname, "development/media/favicon.ico"),
       scriptLoading: "module",
       inject: "body"
     })],
@@ -25,7 +26,7 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4)/,
+        test: /\.(png|svg|jpg|jpeg|gif|mp4|ico)/,
         type: 'asset/resource'
       }
     ]
