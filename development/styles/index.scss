@@ -68,7 +68,7 @@ $headings-font-weight: 400;
 $headings-line-height: 1.5;
 $headings-color: inherit !default;
 
-$h1-font-size: $font-size-base * 4.3;
+$h1-font-size: $font-size-base * 7;
 $h2-font-size: $font-size-base * 3.26;
 $h3-font-size: $font-size-base * 2.62;
 $h4-font-size: $font-size-base * 1.618;
@@ -260,7 +260,8 @@ $utilities: map-merge($utilities, $modified-utilities);
 @import "/node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-@import url("sass/color-mode-toggle.scss");
+@import "sass/color-mode-toggle";
+@import "sass/headings";
 
 // IMPORT WHOLE BOOTSTRAP LIBRARY?
 // @import "/node_modules/bootstrap/scss/bootstrap";
