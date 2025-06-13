@@ -1,89 +1,80 @@
-// ADOBE FONTS
-@import url("https://use.typekit.net/qxm4hdp.css");
+//  ========= TYPOGRAPHY
+@import "https://use.typekit.net/qxm4hdp.css";
+@import "sass/typography.scss";
 
-$height: 300px;
-$width: 300px;
-$space: 10px;
-
-body {
-  margin: 0;
-}
-
-.fullscreen {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-left: 10vw;
-  font-size: 8vw;
-}
-
-//  //  ========= TYPOGRAPHY
-// ========== @import url("sass/typography.scss"); ========== USE@() ???
 $bc-sklonar: "bc-sklonar", sans-serif;
-$sirenne-six-mvb: "sirenne-six-mvb", serif;
-$sirenne-six-mvb-roman-small: "sirenne-six-mvb-roman-small", serif;
-$p22-elizabethan: "p22-elizabethan", sans-serif;
+$sirenne: "sirenne-six-mvb", serif;
+$sirenne-caps: "sirenne-six-mvb-roman-small", serif;
+$elizabethan: "p22-elizabethan", sans-serif;
 
-body {
-  font-family: $bc-sklonar;
-}
+// =========== COLORS
+@import url("sass/colors.scss");
+$black-russian: #15001f;
+$gulf-blue: #030f4a;
+$violent-violet: #290957;
+$red-devil: #870014;
+$chenin: #ded47a;
+$citrine-white: #f7f7cd;
+$half-and-half: #fffee3;
+$white-lilac: #fcfaff;
 
-// // =========== THEME COLOR VARIABLES
-// ========== @import url("sass/colors.scss"); ========== USE@() ???
-$paprika: #990033;
-$black-rose: #660033;
-$athens-gray: #f0f2f5;
-$tiber: #003333;
-$blue-stone: #006664;
+// body {
+//   background-color: $black-russian;
+//   color: $white-lilac;
+// }
 
-body {
-  background-color: $tiber;
-  color: $athens-gray;
-}
-.fullscreen {
-  background: #838383;
-}
-.dark {
-  background: $tiber;
-  color: #f0f2f5;
-}
-.light {
-  background: #f0f2f5;
-}
-.pink {
-  background: #f1d9e1;
-}
-
-// BOOTSTRAP FUNCTIONS
-// ===========  1. functions first
+// BOOTSTRAP
+// 1. functions first
 @import "/node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here - redefine variables not dependent on anything else
 
-// GLOBAL VARIABLES
+// global variables
 $enable-negative-margins: true;
 $enable-smooth-scroll: true;
 
-
-// ========== @import url("sass/colors.scss"); ========== USE@() ???
-
 // theme color variables
-$primary: $paprika;
-$secondary: $black-rose;
-// add m ore
-$light: $athens-gray;
+$primary: $violent-violet;
+$secondary: $chenin;
+$light: $citrine-white;
+$dark: $black-russian;
+$success: #117245;
+$info: $gulf-blue;
+$warning: $chenin;
+$danger: $red-devil;
+
+$border-color: $primary;
 
 // font family
 $font-family-base: $bc-sklonar;
+$font-family-serif: $sirenne;
+// $font-family-sans-serif: ;
+$font-family-monospace: $bc-sklonar;
+// $font-family-code: ;
+$headings-font-family: $sirenne-caps;
+$display-font-family: $sirenne;
+$input-btn-font-family: $bc-sklonar;
+$btn-font-family: $sirenne;
+$input-font-family: $bc-sklonar;
+$form-select-font-family: $bc-sklonar;
 
 // font sizes
 $font-size-base: 1rem;
-$lead-font-size: $font-size-base * 1.5;
+$lead-font-size: $font-size-base * 1.618;
 
 // headings
-$headings-font-weight: 300;
+$headings-font-style: null !default;
+$headings-font-weight: 400;
 $headings-line-height: 1.5;
-$h1-font-size: $font-size-base * 2.75;
+$headings-color: inherit !default;
+
+$h1-font-size: $font-size-base * 4.3;
+$h2-font-size: $font-size-base * 3.26;
+$h3-font-size: $font-size-base * 2.62;
+$h4-font-size: $font-size-base * 1.618;
+$h5-font-size: $font-size-base * 1.33;
+$h6-font-size: $font-size-base * 1.1;
+
 
 // links
 $link-color: $secondary;
@@ -95,11 +86,21 @@ $link-hover-color: shift-color($link-color, -$link-shade-percentage);
 // breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 500px,
-  md: 700px,
-  lg: 900px,
-  xl: 1100px,
-  xxl: 1300px,
+  sm: 640px,
+  md: 787px,
+  lg: 1024px,
+  xl: 1360px,
+  xxl: 1600px,
+);
+
+// headings
+$heading-size: (
+  h1: 4.23rem,
+  h2: 2.62rem,
+  h3: 1.618rem,
+  h4: 1.33rem,
+  h5: 1.25rem,
+  h6: 1rem,
 );
 
 // spacers
@@ -122,7 +123,6 @@ $border-widths: (
   4: 7px,
   5: 9px,
 );
-$border-color: $primary;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "/node_modules/bootstrap/scss/variables";
@@ -132,14 +132,15 @@ $border-color: $primary;
 
 // add colors to theme
 $custom-colors: (
-  "primary-light": #fff8fb,
-  "secondary-light": #f6fffb,
+  "tertiary": $red-devil,
+  "quaternary": $gulf-blue,
+  "quininary": $black-russian
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-// remove colors from theme
-$theme-colors: map-remove($theme-colors, "danger");
+// // remove colors from theme
+// $theme-colors: map-remove($theme-colors, "danger");
 
 // add classes for color pallette colors
 @each $color, $val in $colors {
@@ -163,11 +164,11 @@ $theme-colors: map-remove($theme-colors, "danger");
   }
 }
 
-// add display heading
-$custom-display-font-sizes: (
-  7: 2rem,
-);
-$display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
+// // add display heading
+// $custom-display-font-sizes: (
+//   7: 2rem,
+// );
+// $display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 // 5. Include remainder of required parts
 @import "/node_modules/bootstrap/scss/maps";
@@ -217,26 +218,9 @@ $display-font-sizes: map-merge($custom-display-font-sizes, $display-font-sizes);
 
 // helpers
 @import "/node_modules/bootstrap/scss/helpers";
-// ...
 
 // adding utilities
 $custom-utilities: (
-  "rotate": (
-    property: transform,
-    class: rotate,
-    values: (
-      0: rotate(0deg),
-      20: rotate(20deg),
-      40: rotate(40deg),
-      60: rotate(60deg),
-      80: rotate(80deg),
-      100: rotate(100deg),
-      120: rotate(120deg),
-      140: rotate(140deg),
-      160: rotate(160deg),
-      180: rotate(180deg),
-    ),
-  ),
   "opacity": (
     property: opacity,
     class: o,
@@ -276,8 +260,7 @@ $utilities: map-merge($utilities, $modified-utilities);
 @import "/node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+@import url("sass/color-mode-toggle.scss");
 
 // IMPORT WHOLE BOOTSTRAP LIBRARY?
 // @import "/node_modules/bootstrap/scss/bootstrap";
-
-@import url("sass/color-mode-toggle.scss");

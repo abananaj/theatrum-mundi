@@ -1,4 +1,17 @@
-.tk-bc-sklonar { font-family: "bc-sklonar",sans-serif; }
-.tk-sirenne-six-mvb { font-family: "sirenne-six-mvb",serif; }
-.tk-sirenne-six-mvb-roman-small { font-family: "sirenne-six-mvb-roman-small",serif; }
-.tk-p22-elizabethan { font-family: "p22-elizabethan",sans-serif; }
+.sklonar {
+  font-family: "bc-sklonar", sans-serif;
+}
+.sirenne {
+  font-family: "sirenne-six-mvb", serif;
+}
+.sirenne-caps {
+  font-family: "sirenne-six-mvb-roman-small", serif;
+}
+.elizabethan {
+  font-family: "p22-elizabethan", sans-serif;
+}
+
+$bc-sklonar: "bc-sklonar", sans-serif;
+$sirenne: "sirenne-six-mvb", serif;
+$sirenne-caps: "sirenne-six-mvb-roman-small", serif;
+$elizabethan: "p22-elizabethan", sans-serif;
