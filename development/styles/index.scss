@@ -262,6 +262,40 @@ $utilities: map-merge($utilities, $modified-utilities);
 // 8. Add additional custom code here
 @import "sass/color-mode-toggle";
 @import "sass/headings";
+@import "sass/homepg";
+@import "sass/jennings-heidelberg";
+@import "sass/navbar";
+@import "sass/parallax-grid-gallery";
 
 // IMPORT WHOLE BOOTSTRAP LIBRARY?
 // @import "/node_modules/bootstrap/scss/bootstrap";
+
+// body {
+  // background-color: black;
+  // color: white;
+  // font-family: "bc-sklonar", sans-serif;
+  // margin: 0;
+// }
+
+// .fullscreen {
+  // height: 100vh;
+  // background: grey;
+  // display: flex;
+  // align-items: center;
+  // padding-left: 10vw;
+  // font-size: 8vw;
+// }
+
+// .dark {
+  // background: #333;
+  // color: #ccc;
+// }
+
+// .light {
+  // background: #ccc;
+// }
+
+// .pink {
+  // background: #fcf;
+// }
+/*# sourceMappingURL=index.css.map */

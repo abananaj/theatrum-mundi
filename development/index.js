@@ -9,4 +9,10 @@ console.log(testModule);
 // BABEL TEST
 [1, 2, 3].map(n => n + 1);
 
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import { gsap } from "gsap";
+import { bootstrap } from "bootstrap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import { LocomotiveScroll } from "locomotive-scroll";
+
+import { homepg } from "./scripts/js/homepg";
