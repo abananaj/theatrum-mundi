@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: { index: path.resolve(__dirname, "development/index.js") },
+  entry: { index: path.resolve(__dirname, "development/scripts/index.js") },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "development/template.html"),
+      template: path.resolve(__dirname, "development/index.html"),
       favicon: path.resolve(__dirname, "development/media/favicon.ico"),
       scriptLoading: "module",
       inject: "body"
