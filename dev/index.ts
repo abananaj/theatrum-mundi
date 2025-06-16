@@ -18,4 +18,4 @@ import { SplitText } from "gsap/SplitText";
 import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
-import '../assets/scripts/ts/homepg';
+import './ts/homepg';

@@ -14,16 +14,18 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       title: 'Home',
       filename: 'index.html',
-      template: path.resolve(__dirname, "dev/index.html"),
+      template: path.resolve(__dirname, "dev/_index.html"),
       scriptLoading: "module",
       inject: "body",
+      favicon: path.resolve(__dirname, "dev/media/globe-logo.png"),
     }),
     new HtmlWebpackPlugin({
       title: 'About',
       filename: 'about.html',
-      template: path.resolve(__dirname, "dev/about.html"),
+      template: path.resolve(__dirname, "dev/_about.html"),
       scriptLoading: "module",
       inject: "body",
+      favicon: path.resolve(__dirname, "dev/media/globe-logo.png"),
     }),
   ],
   module: {
@@ -43,7 +45,7 @@ const config: webpack.Configuration = {
         use: ["html-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4)/,
+        test: /\.(png|svg|jpg|jpeg|gif|mp4|ico)/,
         type: "asset/resource",
       },
     ],
