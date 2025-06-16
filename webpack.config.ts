@@ -4,13 +4,24 @@ import "webpack-dev-server";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = {
-  entry: { index: path.resolve(__dirname, "dev/index.ts") },
+  entry: {
+    scripts: path.resolve(__dirname, "dev/index.ts")
+  },
   resolve: {
     extensions: [".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Home',
+      filename: 'index.html',
       template: path.resolve(__dirname, "dev/index.html"),
+      scriptLoading: "module",
+      inject: "body",
+    }),
+    new HtmlWebpackPlugin({
+      title: 'About',
+      filename: 'about.html',
+      template: path.resolve(__dirname, "dev/about.html"),
       scriptLoading: "module",
       inject: "body",
     }),

@@ -6,12 +6,11 @@ import config from "./webpack.config";
 
 const devConfig: webpack.Configuration = merge(config, {
     mode: 'development',
+  devtool: 'inline-source-map',
     devServer: {
         static: path.resolve(__dirname, 'prod'),
-        liveReload: true,
-        devMiddleware: {
-            publicPath: '/'
-        }
+        // liveReload: true,
+        watchFiles: path.resolve(__dirname, 'dev/*.html'),
     },
     module: {
         rules: [
