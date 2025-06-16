@@ -1,7 +1,7 @@
 // ==================== TESTS
 console.log('hello from index.js');
 // module
-import { testModule } from "../assets/scripts/js/testModule";
+import { testModule } from "./ts/testModule.ts";
 console.log(testModule);
 // babel
 [1, 2, 3].map(n => n + 1);
@@ -12,10 +12,10 @@ import "./index.scss";
 
 // ==================== NPM IMPORTS
 import { gsap } from "gsap";
-import { bootstrap } from "bootstrap";
+import "bootstrap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { LocomotiveScroll } from "locomotive-scroll";
+import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
-import { nameMorph } from '../assets/scripts/js/homepg';
+import '../assets/scripts/ts/homepg';
