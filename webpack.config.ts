@@ -1,34 +1,43 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import path from "path";
+import webpack from "webpack";
+import "webpack-dev-server";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
-  entry: { index: path.resolve(__dirname, "development/scripts/index.js") },
+const config: webpack.Configuration = {
+  entry: { index: path.resolve(__dirname, "dev/index.ts") },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "development/index.html"),
-      favicon: path.resolve(__dirname, "development/media/favicon.ico"),
+      template: path.resolve(__dirname, "dev/index.html"),
       scriptLoading: "module",
-      inject: "body"
-    })],
+      inject: "body",
+    }),
+  ],
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-typescript"],
+          },
+        },
       },
       {
         test: /\.html$/,
-        use: ["html-loader"]
+        use: ["html-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|mp4|ico)/,
-        type: 'asset/resource'
-      }
-    ]
-  }
+        test: /\.(png|svg|jpg|jpeg|gif|mp4)/,
+        type: "asset/resource",
+      },
+    ],
+  },
+  ignoreWarnings: [{ module: /node_modules/ }],
 };
+export default config;
+

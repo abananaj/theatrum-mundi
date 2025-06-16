@@ -1,25 +1,31 @@
-const path = require("path");
-const { merge } = require("webpack-merge");
-const config = require("./webpack.config");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import path from "path";
+import webpack from "webpack";
+import 'webpack-dev-server';
+import merge from "webpack-merge";
+import config from "./webpack.config";
 
-module.exports = merge(config, {
+const devConfig: webpack.Configuration = merge(config, {
     mode: 'development',
-    output: {
-        filename: "[name].scripts.js",
-        path: path.resolve(__dirname, "production"),
-        assetModuleFilename: "media/[name][ext][query]"
-    },
-    plugins: [new MiniCssExtractPlugin({ filename: "[name].styles.css" })],
     devServer: {
-        static: path.resolve(__dirname, './production'),
+        static: path.resolve(__dirname, 'prod'),
         liveReload: true,
         devMiddleware: {
             publicPath: '/'
         }
     },
     module: {
-        rules: [ ]
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", /* Use style-loader for dev builds */
+                    // MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+                    "css-loader",
+                    "sass-loader",
+                ],
+            },
+        ],
     },
-    ignoreWarnings: [{ module: /node_modules/ }]
 });
+
+export default devConfig;

@@ -1,31 +1,31 @@
-const path = require('path');
-const { merge } = require("webpack-merge");
-const config = require("./webpack.config");
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+import path from "path";
+import webpack from 'webpack';
+import merge from "webpack-merge";
+import config from "./webpack.config";
+import TerserPlugin from "terser-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 
-module.exports = merge(config, {
+const prodConfig: webpack.Configuration = merge(config, {
     mode: 'production',
     output: {
         filename: "[name].scripts.[contenthash].js",
-        path: path.resolve(__dirname, "production"),
+        path: path.resolve(__dirname, "prod"),
         assetModuleFilename: "media/[name].[hash][ext][query]",
         clean: true,
     },
     plugins: [new MiniCssExtractPlugin({ filename: "[name].styles.[contenthash].css" })],
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
-            }
+              {
+                test: /\.scss$/,
+                use: [
+                  // "style-loader", /* Use style-loader for dev builds */
+                  MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+                  "css-loader",
+                  "sass-loader",
+                ],
+              },
         ],
     },
     optimization: {
@@ -34,10 +34,10 @@ module.exports = merge(config, {
             new TerserPlugin({
                 parallel: true,
                 extractComments: false,
-                terserOptions: {
-                    // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
-                },
             }),
         ],
     }
 });
+
+export default prodConfig;
+// Note: The MiniCssExtractPlugin and HtmlWebpackPlugin are commented out for simplicity.
