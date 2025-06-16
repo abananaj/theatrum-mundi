@@ -1,7 +1,7 @@
 *.log
 *.lnk
 node_modules/**
-production/**
-**/wp-admin/
-**/wp-includes/
+prod/
+## too heavy
+wp/
 assets/_archive/
