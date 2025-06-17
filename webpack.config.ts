@@ -19,13 +19,19 @@ const config: webpack.Configuration = {
       inject: "body",
       favicon: path.resolve(__dirname, "dev/media/globe-logo.png"),
     }),
+    // new HtmlWebpackPlugin({
+    //   title: 'About',
+    //   filename: 'about.html',
+    //   template: path.resolve(__dirname, "dev/_about.html"),
+    //   scriptLoading: "module",
+    //   inject: "body",
+    //   favicon: path.resolve(__dirname, "dev/media/globe-logo.png"),
+    // }),
     new HtmlWebpackPlugin({
-      title: 'About',
-      filename: 'about.html',
-      template: path.resolve(__dirname, "dev/_about.html"),
-      scriptLoading: "module",
-      inject: "body",
-      favicon: path.resolve(__dirname, "dev/media/globe-logo.png"),
+      filename: 'fb.html',
+      scriptLoading: "defer",
+      template: './dev/html/parts/_feedbucket.html', // Path to your HTML template
+      inject: 'head', // Inject scripts into the <head>
     }),
   ],
   module: {
