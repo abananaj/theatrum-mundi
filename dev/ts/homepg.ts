@@ -1,3 +1,9 @@
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "locomotive-scroll";
+const LocomotiveScroll = require("locomotive-scroll").default;
+
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));

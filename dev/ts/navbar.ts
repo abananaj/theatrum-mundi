@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const navToggle = gsap
     .timeline()
     .set("#navbar", { autoAlpha: 1 })

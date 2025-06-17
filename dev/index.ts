@@ -11,11 +11,9 @@ console.log(testModule);
 import "./index.scss";
 
 // ==================== NPM IMPORTS
-import { gsap } from "gsap";
 import "bootstrap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
 import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
 import './ts/homepg';
+import './ts/navbar';
