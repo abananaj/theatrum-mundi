@@ -1,10 +1,5 @@
-// body {
-// 	visibility: hidden;
-// 	opacity: 0;
-// }
-
 .tm-scroll {
-	.intro {
+	.screen {
 		z-index: 999;
 		position: fixed;
 		top: 0;
@@ -21,7 +16,7 @@
 			height: 100%;
 			width: 100%;
 			transform-origin: bottom;
-			background-color: white;
+			background-color: pink;
 		}
 	}
 	.scrollContainer {
@@ -41,7 +36,6 @@
 			height: 90%;
 			transform: translate(-50%, -50%);
 			filter: saturate(0) brightness(83%);
-
 			img {
 				height: 100%;
 			}
@@ -57,10 +51,12 @@
 		h1 {
 			// font-family: "Nova Flat", cursive;
 			font-size: 14.5vw;
-			text-align: center;
+			// text-align: center;
 			user-select: none;
 		}
-
+		h2 {
+			font-size: 8vw;
+		}
 		p {
 			max-width: clamp(500px, 90%, 720px);
 			margin: 0 auto;
@@ -111,3 +107,4 @@
 		}
 	}
 }
+@import "/node_modules/locomotive-scroll/src/locomotive-scroll.scss";

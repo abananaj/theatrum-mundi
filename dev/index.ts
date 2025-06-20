@@ -1,7 +1,7 @@
 // ==================== TESTS
 console.log('hello from index.js');
 // module
-import { testModule } from "./ts/testModule.ts";
+import { testModule } from "./scripts/testModule.ts";
 console.log(testModule);
 // babel
 [1, 2, 3].map(n => n + 1);
@@ -15,5 +15,5 @@ import "bootstrap";
 import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
-import './ts/homepg';
-import './ts/navbar';
+import './scripts/_theatrum-scroll.js';
+import './scripts/navbar.ts';

@@ -1,12 +1,17 @@
 import gsap from "gsap";
+// import { GSAPTimeline } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "locomotive-scroll";
+
 const LocomotiveScroll = require("locomotive-scroll").default;
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
+// On load change body opacity from 0 to 1
+window.addEventListener("load", () =>
+	gsap.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 0.75 })
+);
 
 const locoScroll = new LocomotiveScroll({
 	el: document.querySelector(".scrollContainer"),
