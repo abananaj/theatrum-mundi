@@ -1,7 +1,6 @@
 *.log
 *.lnk
 node_modules/**
-production/**
-**/wp-admin/
-**/wp-includes/
+prod/**
+wp/
 assets/_archive/
