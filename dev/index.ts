@@ -15,5 +15,5 @@ import "bootstrap";
 import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
-import './scripts/_theatrum-scroll.js';
+import './scripts/_theatrum-scroll.ts';
 import './scripts/navbar.ts';
