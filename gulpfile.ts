@@ -12,6 +12,7 @@ function compileContent() {
     )
     .pipe(dest("dev"));
 }
+
 function watchContent() { watch(["dev/html/**/*.html", "dev/html/*.html"], compileContent); }
 
   exports.default = parallel(
