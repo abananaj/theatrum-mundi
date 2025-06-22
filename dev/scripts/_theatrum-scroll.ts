@@ -35,7 +35,7 @@ ScrollTrigger.scrollerProxy(".scrollContainer", {
 		};
 	},
 
-	pinType: document.querySelector(".scrollContainer").style.transform
+	pinType: (document.querySelector(".scrollContainer") as HTMLElement)?.style.transform
 		? "transform"
 		: "fixed"
 });
@@ -117,4 +117,26 @@ gsap.from("p", {
 	y: 50,
 	duration: 1,
 	ease: "power3.out"
+});
+
+//PINNING
+gsap.to(".pinQuote", {
+    yPercent: -100,
+    ease: "none",
+    stagger: 0.5,
+    scrollTrigger: {
+        trigger: "#container",
+        start: "top top",
+        end: "+=300%",
+        scrub: true,
+        pin: true
+    }
+});
+gsap.set(".pinQuote", { zIndex: (i, target, targets) => targets.length - i });
+window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
+
+gsap.to(".panel", {
+	scaleY: 0,
+	duration: 1.65,
+	ease: "power4.inOut"
 });
