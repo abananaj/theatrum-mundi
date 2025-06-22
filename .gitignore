@@ -2,7 +2,4 @@
 *.lnk
 node_modules/
 prod/
-assets/archive/
-*.mp4
-*.mov
-*.zip
+assets/
