@@ -12,7 +12,7 @@ const devConfig: webpack.Configuration = merge(config, {
     devServer: {
         static: path.resolve(__dirname, 'prod'),
         // liveReload: true,
-        watchFiles: path.resolve(__dirname, 'dev/*.html'),
+        watchFiles: path.resolve(__dirname, 'dev/**/*'),
     },
     module: {
         rules: [
