@@ -9,7 +9,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const prodConfig: webpack.Configuration = merge(config, {
     mode: 'production',
     output: {
-        filename: "[name].[contenthash].js",
+        filename: "[name].bundle.[contenthash].js",
         path: path.resolve(__dirname, "prod/"),
         assetModuleFilename: "media/[name].[hash][ext][query]",
         clean: true,
@@ -40,4 +40,3 @@ const prodConfig: webpack.Configuration = merge(config, {
 });
 
 export default prodConfig;
-// Note: The MiniCssExtractPlugin and HtmlWebpackPlugin are commented out for simplicity.

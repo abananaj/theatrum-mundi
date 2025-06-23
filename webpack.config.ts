@@ -2,39 +2,46 @@ import path from "path";
 import webpack from "webpack";
 import "webpack-dev-server";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const config: webpack.Configuration = {
   entry: {
-    scripts: path.resolve(__dirname, "dev/index.ts")
-  },
-  resolve: {
-    extensions: [".ts", ".js"],
+    index: path.resolve(__dirname, "dev/index.ts")
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Home',
-      filename: 'index.html',
+      title: "Home",
+      filename: "index.html",
       template: path.resolve(__dirname, "dev/index.html"),
       scriptLoading: "module",
       inject: "body",
       favicon: path.resolve(__dirname, "dev/content/media/globe-logo.png"),
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'About',
-    //   filename: 'about.html',
-    //   template: path.resolve(__dirname, "dev/_about.html"),
-    //   scriptLoading: "module",
-    //   inject: "body",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'fb.html',
-    //   scriptLoading: "defer",
-    //   template: './dev/content/parts/_feedbucket.html', // Path to your HTML template
-    //   inject: 'head', // Inject scripts into the <head>
-    // }),
+    new HtmlWebpackPlugin({
+      title: "Web Projects",
+      filename: "projects.html",
+      template: path.resolve(__dirname, "dev/projects.html"),
+      scriptLoading: "module",
+      inject: "body",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css"
+    })
   ],
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          // "style-loader" /* Use style-loader for dev builds */,
+          MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+          "css-loader",
+          "sass-loader",
+        ],
+      },
       {
         test: /\.ts$/,
         exclude: /node_modules/,
