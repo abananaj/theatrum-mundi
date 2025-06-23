@@ -3,7 +3,7 @@ const html = require("gulp-file-include");
 
 // CONTENT
 function compileContent() {
-  return src("dev/content/*.html")
+  return src(["dev/content/*.html", "dev/content/**/*.html", "dev/content/**/_*.md"])
     .pipe(
       html({
         prefix: "@@",

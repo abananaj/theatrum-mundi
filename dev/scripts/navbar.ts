@@ -13,9 +13,9 @@ ScrollTrigger.create({
     animation: navToggle,
     toggleActions: "play none none reverse",
     fastScrollEnd: true,
-    markers: {
-        // indent: 150 * i,
-        startColor: "black",
-        endColor: "black"
-    }
+    // markers: {
+    //     indent: 150 * i,
+    //     startColor: "black",
+    //     endColor: "black"
+    // }
 });

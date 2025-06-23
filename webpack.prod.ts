@@ -9,19 +9,19 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const prodConfig: webpack.Configuration = merge(config, {
     mode: 'production',
     output: {
-        filename: "[name].scripts.[contenthash].js",
+        filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "prod/"),
         assetModuleFilename: "media/[name].[hash][ext][query]",
         clean: true,
     },
-    plugins: [new MiniCssExtractPlugin({ filename: "[name].styles.[contenthash].css" })],
+    plugins: [new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" })],
     module: {
         rules: [
               {
                 test: /\.scss$/,
                 use: [
-                  // "style-loader", /* Use style-loader for dev builds */
-                  MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+                  "style-loader", /* Use style-loader for dev builds */
+                //   MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
                   "css-loader",
                   "sass-loader",
                 ],

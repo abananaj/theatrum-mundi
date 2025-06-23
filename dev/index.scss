@@ -1,6 +1,6 @@
 //  ========= TYPOGRAPHY
 @import "https://use.typekit.net/qxm4hdp.css";
-@import "styles/typography.scss";
+@import "styles/typography";
 
 $bc-sklonar: "bc-sklonar", sans-serif;
 $sirenne: "sirenne-six-mvb", serif;
@@ -261,8 +261,8 @@ $utilities: map-merge($utilities, $modified-utilities);
 h1 { font-family: $elizabethan; }
 
 @import "/node_modules/locomotive-scroll/src/locomotive-scroll.scss";
-@import "styles/_navbar.scss";
-@import "styles/_theatrum-scroll.scss";
+@import "styles/navbar";
+@import "styles/tm-scroll";
 
 // IMPORT WHOLE BOOTSTRAP LIBRARY?
 // @import "/node_modules/bootstrap/scss/bootstrap";
