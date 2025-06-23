@@ -1,9 +1,3 @@
-import gsap from "gsap";
-// import { GSAPTimeline } from "gsap";
-import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "locomotive-scroll";
-
 const LocomotiveScroll = require("locomotive-scroll").default;
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -119,20 +113,22 @@ gsap.from("p", {
 	ease: "power3.out"
 });
 
-//PINNING
+// PINNING
 gsap.to(".pinQuote", {
     yPercent: -100,
     ease: "none",
     stagger: 0.5,
     scrollTrigger: {
-        trigger: "#container",
+        trigger: "quote-section",
         start: "top top",
-        end: "+=300%",
+        end: "+=100%",
+		markers: true,
         scrub: true,
         pin: true
     }
 });
 gsap.set(".pinQuote", { zIndex: (i, target, targets) => targets.length - i });
+
 window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
 
 gsap.to(".panel", {

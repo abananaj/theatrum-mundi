@@ -18,11 +18,6 @@ $citrine-white: #f7f7cd;
 $half-and-half: #fffee3;
 $white-lilac: #fcfaff;
 
-body {
-  background-color: $black-russian;
-  color: $white-lilac;
-}
-
 // BOOTSTRAP
 // 1. functions first
 @import "/node_modules/bootstrap/scss/functions";
@@ -32,6 +27,9 @@ body {
 // global variables
 $enable-negative-margins: true;
 $enable-smooth-scroll: true;
+
+$body-bg: $black-russian;
+$body-color: $white-lilac;
 
 // theme color variables
 $primary: $violent-violet;
@@ -264,6 +262,7 @@ h1 { font-family: $elizabethan; }
 @import "styles/navbar";
 @import "styles/tm-scroll";
 
+@import "styles/quotes";
 // IMPORT WHOLE BOOTSTRAP LIBRARY?
 // @import "/node_modules/bootstrap/scss/bootstrap";
 

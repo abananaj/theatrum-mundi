@@ -1,34 +1,35 @@
-// ==================== TESTS
-console.log('hello from index.js');
-// module
-import { testModule } from "./scripts/testModule.ts";
-console.log(testModule);
-// babel
-[1, 2, 3].map(n => n + 1);
-
-
-// ==================== STYLES
-import "./index.scss";
-
-// ==================== NPM IMPORTS
-import "bootstrap";
-import "locomotive-scroll";
-
-// ==================== CUSTOM MODULES
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "locomotive-scroll";
 
-//  TM-SCROLL
-// import './scripts/tmScroll.ts';
+// NAVBAR
+const navToggle = gsap
+    .timeline()
+    .set("#navbar", { autoAlpha: 1 })
+    .from("#navbar", { yPercent: 100, ease: "power4.in" })
+    .from("#navbar nav ul li", { xPercent: -100, duration: 0.35 });
+
+ScrollTrigger.create({
+    trigger: "main",
+    start: "75% bottom",
+    animation: navToggle,
+    toggleActions: "play none none reverse",
+    fastScrollEnd: true,
+    markers: {
+        startColor: "black",
+        endColor: "black"
+    }
+}).refresh();
+
+// HOME PAGE
 const LocomotiveScroll = require("locomotive-scroll").default;
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 // On load change body opacity from 0 to 1
 window.addEventListener("load", () =>
-	gsap.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 0.75 })
+	gsap.fromTo("body", { opacity: 0 }, { opacity: 1, duration: 0.75 })
 );
 
 const locoScroll = new LocomotiveScroll({
@@ -137,7 +138,6 @@ gsap.from("p", {
 	ease: "power3.out"
 });
 
-ScrollTrigger.refresh();
 //PINNING
 // gsap.to(".pinQuote", {
 //     yPercent: -100,
@@ -146,7 +146,7 @@ ScrollTrigger.refresh();
 //     scrollTrigger: {
 //         trigger: "#container",
 //         start: "top top",
-//         end: "+=100%",
+//         end: "+=300%",
 //         scrub: true,
 //         pin: true
 //     }
@@ -159,24 +159,4 @@ gsap.to(".panel", {
 	scaleY: 0,
 	duration: 1.65,
 	ease: "power4.inOut"
-});
-
-// NAVBAR
-// import './scripts/navbar.ts';
-const navToggle = gsap
-    .timeline()
-    .set("#navbar", { autoAlpha: 1 })
-    .from("#navbar", { yPercent: 100, ease: "power4.in" })
-    .from("#navbar nav ul li", { xPercent: -100, duration: 0.35 });
-
-ScrollTrigger.create({
-    trigger: "main",
-    start: "75% bottom",
-    animation: navToggle,
-    toggleActions: "play none none reverse",
-    fastScrollEnd: true,
-    markers: {
-        startColor: "black",
-        endColor: "black"
-    }
 });

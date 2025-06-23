@@ -6,7 +6,13 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const config: webpack.Configuration = {
   entry: {
-    index: path.resolve(__dirname, "dev/index.ts")
+    index: path.resolve(__dirname, "dev/index.ts"),
+  },
+  output: {
+    filename: "[name].bundle.[contenthash].js",
+    path: path.resolve(__dirname, "prod/"),
+    assetModuleFilename: "media/[name].[hash][ext][query]",
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -23,13 +29,23 @@ const config: webpack.Configuration = {
       template: path.resolve(__dirname, "dev/projects.html"),
       scriptLoading: "module",
       inject: "body",
-    })
+    }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
   ],
   resolve: {
     extensions: [".ts", ".js"],
   },
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          // "style-loader", /* Use style-loader for dev builds */
+          MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+          "css-loader",
+          "sass-loader",
+        ],
+      },
       {
         test: /\.ts$/,
         exclude: /node_modules/,

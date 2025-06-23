@@ -1,1 +1,8 @@
-h1 { font-family: $elizabethan; }
+h1 {
+  font-family: $elizabethan;
+}
+
+h2 {
+  color: white;
+  mix-blend-mode: difference;
+}
