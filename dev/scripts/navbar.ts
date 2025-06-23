@@ -8,7 +8,7 @@ const navToggle = gsap
     .from("#navbar nav ul li", { xPercent: -100, duration: 0.35 });
 
 ScrollTrigger.create({
-    trigger: ".tm-scroll",
+    trigger: "body",
     start: "75% bottom",
     animation: navToggle,
     toggleActions: "play none none reverse",

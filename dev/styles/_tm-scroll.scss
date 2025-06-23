@@ -36,8 +36,9 @@
       height: 90%;
       transform: translate(-50%, -50%);
       filter: saturate(0) brightness(83%);
-      img {
+      video {
         height: 100%;
+        object-fit: cover;
       }
     }
 
