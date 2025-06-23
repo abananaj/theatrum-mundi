@@ -7,13 +7,12 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 const devConfig: webpack.Configuration = merge(config, {
   mode: "development",
-  plugins: [new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" })],
-
-  devtool: "inline-source-map",
+    devtool: "inline-source-map",
+      plugins: [new MiniCssExtractPlugin({ filename: "[name].css" })],
   devServer: {
     static: path.resolve(__dirname, "prod"),
     // liveReload: true,
-    watchFiles: path.resolve(__dirname, 'dev/*'),
+    watchFiles: path.resolve(__dirname, 'dev/**/*'),
     },
     module: {
         rules: [

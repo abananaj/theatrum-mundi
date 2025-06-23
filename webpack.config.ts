@@ -23,9 +23,6 @@ const config: webpack.Configuration = {
       template: path.resolve(__dirname, "dev/projects.html"),
       scriptLoading: "module",
       inject: "body",
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css"
     })
   ],
   resolve: {
@@ -33,15 +30,6 @@ const config: webpack.Configuration = {
   },
   module: {
     rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          // "style-loader" /* Use style-loader for dev builds */,
-          MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
-          "css-loader",
-          "sass-loader",
-        ],
-      },
       {
         test: /\.ts$/,
         exclude: /node_modules/,

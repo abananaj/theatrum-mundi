@@ -20,8 +20,8 @@ const prodConfig: webpack.Configuration = merge(config, {
               {
                 test: /\.scss$/,
                 use: [
-                  "style-loader", /* Use style-loader for dev builds */
-                //   MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
+                  // "style-loader", /* Use style-loader for dev builds */
+                  MiniCssExtractPlugin.loader /* Use MiniCssExtractPlugin.loader for production builds */,
                   "css-loader",
                   "sass-loader",
                 ],
