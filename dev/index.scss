@@ -31,6 +31,33 @@ $enable-smooth-scroll: true;
 $body-bg: $black-russian;
 $body-color: $white-lilac;
 
+// custom color variables
+
+$black-russian: #15001f;
+$gulf-blue: #030f4a;
+$violent-violet: #290957;
+$red-devil: #870014;
+$chenin: #ded47a;
+$citrine-white: #f7f7cd;
+$half-and-half: #fffee3;
+$white-lilac: #fcfaff;
+
+$white: 	$half-and-half;
+$black: 	$black-russian;
+
+$blue:      $gulf-blue;
+$indigo: 	#09154f;
+$purple:    $violent-violet;
+$pink:      #ff5252;
+$red: 		$red-devil;
+$orange: 	#bf7513;
+$yellow: 	#dbac2a;
+$green: 	#032603;
+$teal:      #20c997 !default;
+$cyan:      #17a2b8 !default;
+$gray:      #BAB1AD !default;
+$gray-dark: #403734 !default;
+
 // theme color variables
 $primary: $violent-violet;
 $secondary: $chenin;
