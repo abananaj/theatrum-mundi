@@ -119,10 +119,9 @@ gsap.to(".pinQuote", {
     ease: "none",
     stagger: 0.5,
     scrollTrigger: {
-        trigger: "quote-section",
+        trigger: "section.pinQuote",
         start: "top top",
         end: "+=100%",
-		markers: true,
         scrub: true,
         pin: true
     }

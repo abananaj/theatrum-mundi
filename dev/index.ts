@@ -12,7 +12,7 @@ import "./index.scss";
 
 // ==================== NPM IMPORTS
 import "bootstrap";
-import "locomotive-scroll";
+// import "locomotive-scroll";
 
 // ==================== CUSTOM MODULES
 import gsap from "gsap";
@@ -27,38 +27,40 @@ const LocomotiveScroll = require("locomotive-scroll").default;
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 // On load change body opacity from 0 to 1
-window.addEventListener("load", () =>
-	gsap.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 0.75 })
+window.addEventListener("load", () => gsap.fromTo("main", { opacity: 0 }, { opacity: 1, duration: 0.75 })
 );
 
-const locoScroll = new LocomotiveScroll({
-	el: document.querySelector(".scrollContainer"),
-	smooth: true
-});
 
-locoScroll.on("scroll", ScrollTrigger.update);
+window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
 
-ScrollTrigger.scrollerProxy(".scrollContainer", {
-	scrollTop(value) {
-		return arguments.length
-			? locoScroll.scrollTo(value, 0, 0)
-			: locoScroll.scroll.instance.scroll.y;
-	},
-	getBoundingClientRect() {
-		return {
-			top: 0,
-			left: 0,
-			width: window.innerWidth,
-			height: window.innerHeight
-		};
-	},
+// const locoScroll = new LocomotiveScroll({
+// 	el: document.querySelector(".scrollContainer"),
+// 	smooth: true
+// });
 
-	pinType: (document.querySelector(".scrollContainer") as HTMLElement)?.style.transform
-		? "transform"
-		: "fixed"
-});
+// locoScroll.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+// ScrollTrigger.scrollerProxy(".scrollContainer", {
+// 	scrollTop(value) {
+// 		return arguments.length
+// 			? locoScroll.scrollTo(value, 0, 0)
+// 			: locoScroll.scroll.instance.scroll.y;
+// 	},
+// 	getBoundingClientRect() {
+// 		return {
+// 			top: 0,
+// 			left: 0,
+// 			width: window.innerWidth,
+// 			height: window.innerHeight
+// 		};
+// 	},
+
+// 	pinType: (document.querySelector(".scrollContainer") as HTMLElement)?.style.transform
+// 		? "transform"
+// 		: "fixed"
+// });
+
+// ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 ScrollTrigger.refresh();
 
@@ -152,9 +154,6 @@ ScrollTrigger.refresh();
 //     }
 // });
 // gsap.set(".pinQuote", { zIndex: (i, target, targets) => targets.length - i });
-
-window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
-
 gsap.to(".panel", {
 	scaleY: 0,
 	duration: 1.65,
