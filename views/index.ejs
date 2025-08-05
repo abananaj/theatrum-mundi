@@ -1,0 +1,24 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+  <body>
+    <!-- NAV TOGGLE -->
+    <button class="nav-toggle" id="navToggle">
+      <img src="https://assets.codepen.io/8875557/globe2.png" alt="" />
+    </button>
+    <!-- NAV (SINGLE PAGE) -->
+    <%- include("./partials/nav.ejs") %>
+      <!-- MAIN -->
+      <main class="theatrum-stage">
+        <h1>Theatrum Mundi</h1>
+        <!--   center-stage: home -->
+        <!--   up-stage: about -->
+        <!--   stage-right: portfolio -->
+        <!--  down-stage: contact -->
+        <!--   stage-left: services -->
+      </main>
+      <script src="./scripts.js"></script>
+  </body>
+  <%- include("./partials/footer.ejs") %>
+
+</html>

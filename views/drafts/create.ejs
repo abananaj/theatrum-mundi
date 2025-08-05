@@ -1,0 +1,32 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+
+      <div class="create-project content">
+        <form action="/projects" method="POST">
+
+          <label for="title">Project title:</label>
+          <input type="text" id="title" name="title" required>
+
+          <label for="role">Project role:</label>
+          <input type="text" id="role" name="role" required>
+
+          <label for="text">Project text:</label>
+          <textarea id="text" name="text" required></textarea>
+          
+          <label for="url">Project url:</label>
+          <input type="text" id="url" name="url" required>
+
+          <label for="icon">Project icon:</label>
+          <textarea id="icon" name="icon" required></textarea>
+
+          <button>Submit</button>
+        </form>
+      </div>
+
+      <%- include("./partials/footer.ejs") %>
+  </body>
+
+</html>
