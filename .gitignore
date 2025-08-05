@@ -2,10 +2,8 @@
 *.lnk
 *.ini
 node-modules/
-production/
-assets/_archive/
-assets/videos/
-assets/pens/
+prod/
+assets/
 **/wp-admin/
 **/wp-includes/
 **/node_modules/
