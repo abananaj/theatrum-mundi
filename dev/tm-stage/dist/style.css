@@ -1,0 +1,183 @@
+.demo {
+  opacity: 25%;
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+  color: #f7f7cd;
+  background-color: #15001f;
+}
+
+.spacer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 1rem;
+  background-color: pink;
+}
+
+.nav-toggle {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 101;
+  background: none;
+  border: none;
+  opacity: 1;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  transition: 500ms ease-in;
+}
+.nav-toggle img {
+  height: 100%;
+}
+
+.main-nav {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: 500ms ease-out;
+}
+.main-nav.active {
+  bottom: 50%;
+  transition: 500ms ease-in;
+}
+.main-nav ul {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.main-nav ul li {
+  font-size: 32px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+.main-nav ul li.center {
+  grid-area: 2/2/2/3;
+  flex-direction: column;
+}
+.main-nav ul li.up {
+  grid-area: 1/2/2/3;
+  flex-direction: column;
+}
+.main-nav ul li.down {
+  grid-area: 3/2/3/3;
+  flex-direction: column-reverse;
+}
+.main-nav ul li.left {
+  grid-area: 2/1/3/2;
+  flex-direction: row;
+}
+.main-nav ul li.right {
+  grid-area: 2/3/3/3;
+  flex-direction: row-reverse;
+}
+.main-nav ul li a {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.theatrum-stage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
+}
+.theatrum-stage .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  transition: 500ms ease-in-out;
+}
+.theatrum-stage .page .inner-wrap {
+  display: flex;
+}
+.theatrum-stage .page button.back {
+  position: absolute;
+  z-index: 100;
+  margin: 10px;
+  background-color: transparent;
+  color: #ded47a;
+  border: none;
+  font-size: 50px;
+}
+.theatrum-stage .page.center {
+  z-index: 1;
+  background-color: #15001f;
+}
+.theatrum-stage .page.up {
+  z-index: 2;
+  transform: translate(0, -100%);
+  background-color: red;
+}
+.theatrum-stage .page.up .back {
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.theatrum-stage .page.right {
+  z-index: 3;
+  transform: translate(100%, 0);
+  background-color: red;
+}
+.theatrum-stage .page.right .back {
+  bottom: 50%;
+  left: 0;
+  transform: translatey(-50%);
+}
+.theatrum-stage .page.down {
+  z-index: 4;
+  transform: translate(0, 100%);
+  background-color: red;
+}
+.theatrum-stage .page.down .back {
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.theatrum-stage .page.left {
+  z-index: 5;
+  transform: translate(-100%, 0);
+  background-color: red;
+}
+.theatrum-stage .page.left .back {
+  bottom: 50%;
+  right: 0;
+  transform: translatey(-50%);
+}
+.theatrum-stage .page.active {
+  transform: translate(0, 0);
+  z-index: 10;
+  opacity: 100%;
+  transition: 500ms ease-in-out;
+}
+.theatrum-stage .page .inner-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}

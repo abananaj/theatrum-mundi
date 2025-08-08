@@ -1,0 +1,201 @@
+// codepen only css
+.demo {
+  opacity: 25%;
+  text-align: center;
+}
+//  theme variables
+$black-russian: #15001f;
+$gulf-blue: #030f4a;
+$violent-violet: #290957;
+$red-devil: #870014;
+$chenin: #ded47a;
+$citrine-white: #f7f7cd;
+$half-and-half: #fffee3;
+$white-lilac: #fcfaff;
+$sklonar: "bc-sklonar", sans-serif;
+$sirenne: "sirenne-six-mvb", serif;
+$sirenne-caps: "sirenne-six-mvb-roman-small", serif;
+$elizabethan: "p22-elizabethan", sans-serif;
+
+body {
+  overflow: hidden;
+  color: $citrine-white;
+  background-color: $black-russian;
+}
+.spacer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin: 1rem;
+  background-color: pink;
+}
+
+// NEEDED
+
+$trans-in: 500ms ease-in;
+$trans-out: 500ms ease-out;
+// #navToggle {
+// }
+.nav-toggle {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 101;
+  background: none;
+  border: none;
+  opacity: 1;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  transition: $trans-in;
+  img {
+    height: 100%;
+  }
+}
+.main-nav {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  transition: $trans-out;
+  &.active {
+    bottom: 50%;
+    transition: $trans-in;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    li {
+      font-size: 32px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      // flex-flow:column nowrap;
+      align-items: center;
+      padding: 1rem;
+      cursor: pointer;
+      transition: 500ms ease-in-out;
+      &.center {
+        grid-area: 2 / 2 / 2 / 3;
+        flex-direction: column;
+      }
+      &.up {
+        grid-area: 1 / 2 / 2 / 3;
+        flex-direction: column;
+      }
+      &.down {
+        grid-area: 3 / 2 / 3 / 3;
+        flex-direction: column-reverse;
+      }
+      &.left {
+        grid-area: 2 / 1 / 3 / 2;
+        flex-direction: row;
+      }
+      &.right {
+        grid-area: 2 / 3 / 3 / 3;
+        flex-direction: row-reverse;
+      }
+      a {
+        white-space: nowrap;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.theatrum-stage {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  overflow: hidden;
+  .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    transition: 500ms ease-in-out;
+    .inner-wrap {
+      display: flex;
+    }
+    button.back {
+      position: absolute;
+      z-index: 100;
+      margin: 10px;
+      background-color: transparent;
+      color: $chenin;
+      border: none;
+      font-size: 50px;
+    }
+    &.center {
+      z-index: 1;
+      background-color: #15001f;
+    }
+    &.up {
+      z-index: 2;
+      transform: translate(0, -100%);
+      background-color: red;
+      .back {
+        bottom: 0;
+        left: 50%;
+        transform: translatex(-50%);
+      }
+    }
+    &.right {
+      z-index: 3;
+      transform: translate(100%, 0);
+      background-color: red;
+      .back {
+        bottom: 50%;
+        left: 0;
+        transform: translatey(-50%);
+      }
+    }
+    &.down {
+      z-index: 4;
+      transform: translate(0, 100%);
+      background-color: red;
+      .back {
+        top: 0;
+        left: 50%;
+        transform: translatex(-50%);
+      }
+    }
+    &.left {
+      z-index: 5;
+      transform: translate(-100%, 0);
+      background-color: red;
+      .back {
+        bottom: 50%;
+        right: 0;
+        transform: translatey(-50%);
+      }
+    }
+    &.active {
+      transform: translate(0, 0);
+      z-index: 10;
+      opacity: 100%;
+      transition: 500ms ease-in-out;
+    }
+    .inner-wrap {
+      position: relative;
+      width: 100%;
+      min-height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
