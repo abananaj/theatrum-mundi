@@ -22,7 +22,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "serve": "node server.js",
     "build": "webpack --config webpack.config.js --mode production -w"
   },
   "devDependencies": {
