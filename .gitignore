@@ -2,4 +2,4 @@
 *.lnk
 node_modules/
 prod/
-assets/archive/
+assets/
