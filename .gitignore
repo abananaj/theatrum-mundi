@@ -4,6 +4,7 @@
 node-modules/
 prod/
 assets/
+archive/
 **/wp-admin/
 **/wp-includes/
 **/node_modules/
